@@ -1,0 +1,73 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="shortcut icon" href="./img/weapon.png" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="/img/reading-eyeglasses.png" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@400;700&display=swap" rel="stylesheet">
+    <title>MilTech</title>
+</head>
+
+<body>
+    <div class="header">
+        <div class="container">
+            <div class="header__content">
+                <div class="header__logo ">
+                    <img src="./img/weapon.png" alt="">
+                    <div class="logo__name">MilTech</div>
+                </div>
+                <div class="header__nav">
+                    <a href="./index.html" class="nav">Головна сторінка</a>
+                    <a href="./about.html" class="nav">Про сайт</a>
+                    <a href="./gallery.html" class="nav">Галерея картинок</a>
+                    <a href="./news.html" class="nav">Новини</a>
+                    <a href="./contact.html" class="nav">Контакти</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="map"></div>
+    <div class="contact__content">
+        <div class="link__content">Адреса : Пункт Незламності, вулиця Тарасівська, 4, Київ, 02000</div>
+        <div class="link__content">Номер : +380662462216</div>
+    </div>
+    <footer class="footer__absolute">
+        <div class="footer__content">
+            <div class="header__nav">
+                <a href="./index.html" class="nav">Головна сторінка</a>
+                <a href="./about.html" class="nav">Про сайт</a>
+                <a href="./gallery.html" class="nav">Галерея картинок</a>
+                <a href="./news.html" class="nav">Новини</a>
+                <a href="./contact.html" class="nav">Контакти</a>
+            </div>
+        </div>
+    </footer>
+    <script>
+        function initMap() {
+            var pos = { lat: 50.44022513873592, lng: 30.50759359040916, }
+            let options = {
+                center: pos,
+                zoom: 16
+            }
+
+            let map = new google.maps.Map(document.getElementById('map'), options)
+
+            let marker = new google.maps.Marker({
+                position: pos,
+                map: map,
+            })
+        }
+    </script>
+
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAAsR9qnK0tfMgt2qQoTXVi1Iqdqs9O3Ic&callback=initMap"
+        async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-element-bundle.min.js"></script>
+
+</body>
+
+</html>
